@@ -1,6 +1,6 @@
 {
-  "name": "zipcelx",
-  "version": "1.1.1",
+  "name": "json2xlsx-export",
+  "version": "1.1.2",
   "description": "JSON Transformer to create .xlsx files",
   "main": "lib/zipcelx.js",
   "scripts": {
@@ -17,19 +17,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/dixieio/zipcelx.git"
+    "url": "git+ssh://git@github.com/banc/json2xlsx-export.git"
   },
   "keywords": [
     "JSON",
     "Excel",
     "xlsx"
   ],
-  "author": "Lars Krieger",
+  "author": [
+    "Lars Krieger",
+    "Vitali Bantsevich"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dixieio/zipcelx/issues"
+    "url": "https://github.com/banc/json2xlsx-export/issues"
   },
-  "homepage": "https://github.com/dixieio/zipcelx#readme",
+  "homepage": "https://github.com/banc/json2xlsx-export#readme",
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.1",
