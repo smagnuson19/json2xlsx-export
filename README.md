@@ -4,7 +4,7 @@ _Lightweight in browser `.xlsx` exporter._
 ### How it use
 
 ```sh
-import json2xls-export from 'json2xls-export';
+import json2xlsx-export from 'json2xls-export';
 
 const config = {
   filename: 'AwesomeFile',
@@ -24,5 +24,5 @@ const config = {
   }
 };
 
-json2xls-export(config);
+json2xlsx-export(config);
 ```
