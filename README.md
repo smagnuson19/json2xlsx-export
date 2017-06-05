@@ -4,7 +4,7 @@ _Lightweight in browser `.xlsx` exporter._
 ### How it use
 
 ```sh
-import json2xlsx-export from 'json2xls-export';
+import json2xlsx-export from 'json2xlsx-export';
 
 const config = {
   filename: 'AwesomeFile',
