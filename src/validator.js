@@ -5,7 +5,7 @@ import {
   INVALID_TYPE_SHEET_DATA
 } from './commons/constants';
 
-const childValidator = (array) => {
+const childValidator = (array = []) => {
   return array.every(item => Array.isArray(item));
 };
 
@@ -20,14 +20,16 @@ export default (config) => {
     return false;
   }
 
-  if (!Array.isArray(config.sheet.data)) {
+  if (!Array.isArray(config.sheets)) {
     console.error(INVALID_TYPE_SHEET);
     return false;
   }
 
-  if (!childValidator(config.sheet.data)) {
-    console.error(INVALID_TYPE_SHEET_DATA);
-    return false;
+  for (let i = 0; i < config.sheets.length; (i += 1)) {
+    if (!childValidator(config.sheets[i].data)) {
+      console.error(INVALID_TYPE_SHEET_DATA);
+      return false;
+    }
   }
 
   return true;

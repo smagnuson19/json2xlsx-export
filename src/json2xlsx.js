@@ -22,13 +22,16 @@ export default (config) => {
 
   const zip = new JSZip();
   const xl = zip.folder('xl');
-  xl.file('workbook.xml', workbookXML);
-  xl.file('_rels/workbook.xml.rels', workbookXMLRels);
+  xl.file('workbook.xml', workbookXML(config.sheets));
+  xl.file('_rels/workbook.xml.rels', workbookXMLRels(config.sheets.length));
   zip.file('_rels/.rels', rels);
   zip.file('[Content_Types].xml', contentTypes);
 
-  const worksheet = generateXMLWorksheet(config.sheet.data);
-  xl.file('worksheets/sheet1.xml', worksheet);
+  (config.sheets || []).forEach((sheet, ind) => {
+    const worksheet = generateXMLWorksheet(sheet.data);
+    xl.file(`worksheets/sheet${ind + 1}.xml`, worksheet);
+  });
+
 
   zip.generateAsync({ type: 'blob' })
     .then((blob) => {
