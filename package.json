@@ -2,7 +2,7 @@
   "name": "json2xlsx-export",
   "version": "1.2.0",
   "description": "JSON Transformer to create .xlsx files",
-  "main": "lib/zipcelx.js",
+  "main": "lib/json2xlsx.js",
   "scripts": {
     "test": "jest",
     "test:dev": "jest --watch",
