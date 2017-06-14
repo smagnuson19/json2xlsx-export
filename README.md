@@ -1,7 +1,7 @@
 # json2xlsx-export
 _Lightweight in browser `.xlsx` exporter._
 
-### How it use
+### How it use since v1.2.0
 
 ```sh
 import json2xlsx-export from 'json2xlsx-export';
@@ -13,10 +13,10 @@ const config = {
       name: 'Sheet1',
       data: [
         [{
-          value: 'Line1',
+          value: 'Text1',
           type: 'string'
         },{
-          value: 'Line2',
+          value: 'Text2',
           type: 'string'
         }, {
           value: 1000,
@@ -25,21 +25,46 @@ const config = {
       ]
     },
     {
-      name: 'Sheet1',
+      name: 'Sheet2',
       data: [
         [{
-          value: 'Line1',
+          value: 'New text1',
           type: 'string'
         },{
-          value: 'Line2',
+          value: 'New text2',
           type: 'string'
         }, {
-          value: 1000,
+          value: 2000,
           type: 'number'
         }]
       ]
     }
   ]
+};
+
+json2xlsx-export(config);
+```
+### How it use in earlier versions
+
+```sh
+import json2xlsx-export from 'json2xlsx-export';
+
+const config = {
+  filename: 'AwesomeFile',
+  sheet: {
+    data: [
+      [{
+        value: 'Text',
+        type: 'string'
+      },{
+        value: 'Another text',
+        type: 'string'
+      }, {
+        value: 1000,
+        type: 'number'
+      }]
+    ]
+  }
 };
 
 json2xlsx-export(config);
