@@ -4,7 +4,7 @@ _Lightweight in browser `.xlsx` exporter._
 ### How it use since v1.2.0
 
 ```sh
-import json2xlsx-export from 'json2xlsx-export';
+import json2xlsx from 'json2xlsx-export';
 
 const config = {
   filename: 'AwesomeFile',
@@ -42,12 +42,12 @@ const config = {
   ]
 };
 
-json2xlsx-export(config);
+json2xlsx(config);
 ```
 ### How it use in earlier versions
 
 ```sh
-import json2xlsx-export from 'json2xlsx-export';
+import json2xlsx from 'json2xlsx-export';
 
 const config = {
   filename: 'AwesomeFile',
@@ -67,5 +67,5 @@ const config = {
   }
 };
 
-json2xlsx-export(config);
+json2xlsx(config);
 ```
