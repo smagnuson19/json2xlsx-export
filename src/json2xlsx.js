@@ -17,7 +17,7 @@ export const generateXMLWorksheet = (rows) => {
 
 export default (config) => {
   if (!validator(config)) {
-    return;
+    throw new Error('Validation failed.');
   }
 
   const zip = new JSZip();
@@ -33,8 +33,11 @@ export default (config) => {
   });
 
 
-  zip.generateAsync({ type: 'blob' })
-    .then((blob) => {
-      FileSaver.saveAs(blob, `${config.filename}.xlsx`);
-    });
+  return zip.generateAsync({
+    type: 'blob',
+    mimeType:
+      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+  }).then((blob) => {
+    FileSaver.saveAs(blob, `${config.filename}.xlsx`);
+  });
 };
