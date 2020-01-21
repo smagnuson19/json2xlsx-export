@@ -38,7 +38,7 @@ export default [
   // an array for the `output` option, where we can specify
   // `file` and `format` for each target)
   {
-    input: 'src/zipcelx.js',
+    input: 'src/json2xlsx.js',
     external: Object.keys(pkg.dependencies),
     output: [
       { file: pkg.main, format: 'cjs' }
@@ -48,7 +48,7 @@ export default [
     ]
   },
   {
-    input: 'src/zipcelx.js',
+    input: 'src/json2xlsx.js',
     external: Object.keys(pkg.dependencies),
     output: [
       { file: pkg.module, format: 'es' }

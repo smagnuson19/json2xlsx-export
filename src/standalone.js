@@ -1,3 +1,3 @@
-import zipcelx from './zipcelx';
+import json2xlsx from './json2xlsx';
 
-global.zipcelx = zipcelx;
+global.json2xlsx = json2xlsx;
